@@ -38,10 +38,10 @@ app.use(express.static('public'));
 app.use(express.static('node_modules'));
 
 const data = [
-    {id: 1, name: "iphone 14",price:30000, isActive: true, imageUrl: "1.jpg"},
-    {id: 2, name: "iphone 15",price:40000, isActive: false, imageUrl: "2.jpg"},
-    {id: 3, name: "iphone 16",price:50000, isActive: true, imageUrl: "3.png"},
-    {id: 4, name: "iphone 17 Plus",price:60000, isActive: false}
+    {id: 1, name: "iphone 14",price:30000, isActive: true,isHome: true, imageUrl: "1.jpg"},
+    {id: 2, name: "iphone 15",price:40000, isActive: false,isHome: false, imageUrl: "2.jpg"},
+    {id: 3, name: "iphone 16",price:50000, isActive: true,isHome: true, imageUrl: "3.png"},
+    {id: 4, name: "iphone 17 Plus",price:60000, isActive: false,isHome: false,imageUrl:"4.jpg"}
 ];
 
 
@@ -55,7 +55,9 @@ app.use("/products", function(req,res){
     });
 });
 app.use("/", function(req,res){
-    res.render("index");
+    res.render("index", {
+        urunler:data
+    });
 });
 
 app.listen(3000,() =>{

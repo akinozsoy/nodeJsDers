@@ -8,18 +8,32 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
-<body class="bg-warning">
-    <h1><%= name %> </h1>
-    <img src="/images/<%= imageUrl %>" alt="" width="100">
-    <br>
-    <p>Fiyat Bilgisi için :<%= price %> </p>
-    <p>
-        <% if (isActive) { %>
-         <span>Ürün Satışta</span>
-         <% } else { %>
-          <span>Ürün Satışta Değil</span>
-        <% } %>
-         
-    </p>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-12">
+            
+             
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/images/<%= imageUrl %>" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= name %></h5>
+                                <p class="card-text"><%= price %> </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eius quisquam libero incidunt vitae aut, excepturi minima quidem architecto dolores quas labore laborum ea earum similique, praesentium deleniti deserunt obcaecati.</p>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis veniam aliquam reprehenderit, quisquam pariatur nobis quae autem sit vitae est, perspiciatis assumenda sed dignissimos odio a, dolor illum temporibus? Ipsa?
+                                </p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro modi consequuntur necessitatibus officiis ullam rerum facere ut incidunt! Quo, quasi? Molestias ea voluptatum nesciunt! Architecto totam accusamus dignissimos et?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>  
+    
 </body>
 </html>
