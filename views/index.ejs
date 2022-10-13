@@ -9,29 +9,14 @@
 </head>
 <body>
 <div class="container mt-3">
+    <h1>Anasayfa
+
+    </h1>
     <div class="row">
         <div class="col-12">
             <% urunler.forEach(urun => { %>   
               <% if (urun.isHome ) { %>  
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="/images/<%= urun.imageUrl %>" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                <a href="/products/<%= urun.id %>">
-                                    <%= urun.name %> 
-                                </a>
-
-                                
-                            </h5>
-                                <p class="card-text"><%= urun.price %> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <%- include("partials/product",urun)  %> 
                 <% } %>   
             </div>
         </div>
